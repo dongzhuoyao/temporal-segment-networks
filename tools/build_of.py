@@ -84,8 +84,8 @@ def run_warp_optical_flow(vid_item, dev_id=0):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="extract optical flows")
-    parser.add_argument("src_dir")
-    parser.add_argument("out_dir")
+    parser.add_argument("src_dir", default="/data4/hutao/dataset/UCF-101")
+    parser.add_argument("out_dir", default="/data4/hutao/dataset/UCF-101-Extracted")
     parser.add_argument("--num_worker", type=int, default=8)
     parser.add_argument("--flow_type", type=str, default='tvl1', choices=['tvl1', 'warp_tvl1'])
     parser.add_argument("--df_path", type=str, default='./lib/dense_flow/', help='path to the dense_flow toolbox')
